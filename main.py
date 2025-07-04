@@ -69,14 +69,14 @@ def button_logic(*args):
     if not spun_language or not spun_project:
         if not spun_language:
             language, _ = helper.color2config(helper.frame2color(spun_last_frame))
-            Label(root, text=f"Language: {language}", font=font_cfg_label).place(x=950, y=80)
+            Label(root, text=f"Language: {language}", font=font_cfg_label).place(x=950, y=140)
             spun_language = True
             
         else:
             color = helper.frame2color(spun_last_frame)
             _, projects = helper.color2config(color)
             project = helper.color2proj(color, projects)
-            Label(root, text=f"Project: {project}", font=font_cfg_label).place(x=950, y=120)
+            Label(root, text=f"Project: {project}", font=font_cfg_label).place(x=950, y=170)
             spun_project = True
 
 
@@ -91,10 +91,10 @@ font_button = tkinter.font.Font(size=16)
 font_winner_label = tkinter.font.Font(size=12)
 font_cfg_label = tkinter.font.Font(size=16)
 
-Label(root, text="Settings", font=font_title).place(x=1050, y=10)
-Label(root, text="Language:", font=font_cfg_label).place(x=950, y=80)
-Label(root, text="Project:", font=font_cfg_label).place(x=950, y=120)
-Button(root, text="Spin!", font=font_button, command=lambda: button_logic(root), height=1, width=10).place(x=940, y=600)
+Label(root, text="Results", font=font_title).place(x=1050, y=50)
+Label(root, text="Language:", font=font_cfg_label).place(x=950, y=140)
+Label(root, text="Project:", font=font_cfg_label).place(x=950, y=170)
+Button(root, text="Spin!", font=font_button, command=lambda: button_logic(root), height=1, width=10).place(x=1000, y=400)
 
 root.bind("<Return>", lambda: button_logic(root))
 
