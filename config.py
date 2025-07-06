@@ -20,10 +20,10 @@ if not os.path.isfile('config.ini'):
         '3': 'Password Manager',
         '4': 'Authentication System',
         '5': 'Neural Network',
-        '6': 'TBD',
-        '7': 'TBD',
-        '8': 'TBD',
-        '9': 'TBD'
+        '6': 'Calorie Tracker',
+        '7': 'Water Intake Reminder',
+        '8': 'Gambling Game',
+        '9': 'Chess'
     }
     
     with open('config.ini', 'w') as f:
